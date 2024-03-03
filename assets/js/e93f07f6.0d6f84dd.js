@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopen_saas=self.webpackChunkopen_saas||[]).push([[9241],{6766:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/open-saas/blog/tags/docusaurus","allTagsPath":"/open-saas/blog/tags","count":4,"unlisted":false}')}}]);
