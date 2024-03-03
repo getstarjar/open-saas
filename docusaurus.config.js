@@ -35,6 +35,23 @@ const config = {
     locales: ['en'],
   },
 
+  plugins: [
+    [
+      'docusaurus-plugin-showcase',
+      {
+          include: "**/*.{md,mdx}",
+          ignore: [
+              "**/node_modules/**",
+              "**/sdks/reference/**",
+              "**/docs/sdks/**",
+              "**/_*.mdx",
+              "**/_*.md"
+          ],
+          onlyLogFailedAttempts: true
+      },
+    ],
+  ],
+
   presets: [
     [
       'classic',
