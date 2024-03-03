@@ -15,7 +15,7 @@ const DEFAULT_OPTIONS = {
     path: "docs", // Path to data on filesystem, relative to site dir.
     routeBasePath: "docs", // URL Route.
     onlyLogFailedAttempts: false,
-    page: "/showcase"
+    page: "/open-saas/showcase"
 };
 
 let articles = [];
