@@ -23,18 +23,16 @@ jobs:
           node-version: 18
           cache: npm
 
-      - name: Build docusaurus-plugin-showcase
-        run: |
-          cd plugins/docusaurus-plugin-showcase
-          npm i
-          npm run build
-          cd ..
       - name: Install dependencies
         run: npm install
         # Link the dependencies to resolve react version conflicts
         # https://iws.io/2022/invalid-hook-multiple-react-instances
-      - name: Link dependencies
-        run: npm link
+      - name: Build docusaurus-plugin-showcase
+        run: |
+          cd plugins/docusaurus-plugin-showcase
+          npm link ../../node_modules/react ../../node_modules/react-dom
+          npm run build
+          cd ../../
       - name: Build website
         run: npm run build
 
