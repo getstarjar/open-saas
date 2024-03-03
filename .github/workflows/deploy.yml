@@ -24,11 +24,11 @@ jobs:
           cache: npm
 
       - name: Build docusaurus-plugin-showcase
-        run: 
-          - cd plugins/docusaurus-plugin-showcase
-          - npm i
-          - npm run build
-          - cd ..
+        run: |
+          cd plugins/docusaurus-plugin-showcase
+          npm i
+          npm run build
+          cd ..
       - name: Install dependencies
         run: npm install
         # Link the dependencies to resolve react version conflicts
