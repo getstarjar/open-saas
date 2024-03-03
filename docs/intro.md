@@ -1,5 +1,11 @@
 ---
 sidebar_position: 1
+
+x-custom:
+  tags:
+    - product:voice
+    - product:video
+  repo: https://github.com/andremartinssw/docusaurus-plugin-showcase
 ---
 
 # Tutorial Intro

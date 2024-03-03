@@ -1,0 +1,12 @@
+[
+  {
+    "tags": [
+      "product:voice",
+      "product:video"
+    ],
+    "title": "Tutorial Intro",
+    "description": "Let's discover Docusaurus in less than 5 minutes.",
+    "website": "/intro",
+    "source": "https://github.com/andremartinssw/docusaurus-plugin-showcase"
+  }
+]
