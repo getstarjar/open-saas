@@ -12,10 +12,10 @@ const DEFAULT_OPTIONS = {
     ignore: [
         "**/node_modules/**"
     ],
-    path: "docs", // Path to data on filesystem, relative to site dir.
-    routeBasePath: "docs", // URL Route.
+    path: "apps", // Path to data on filesystem, relative to site dir.
+    routeBasePath: "apps", // URL Route.
     onlyLogFailedAttempts: false,
-    page: "/open-saas/showcase"
+    page: "/open-saas/apps"
 };
 
 let articles = [];
@@ -140,7 +140,7 @@ module.exports = function(context, options) {
                     newPath = "pathname://" + newPath;
                 }
 
-                article.website = newPath;
+                article.website = `${DEFAULT_OPTIONS.routeBasePath}${newPath}`;
             }
 
             // Check for custom repo

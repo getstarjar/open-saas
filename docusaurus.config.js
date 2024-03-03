@@ -50,6 +50,17 @@ const config = {
           onlyLogFailedAttempts: true
       },
     ],
+    [
+      'content-docs',
+      {
+        id: 'apps',
+        path: 'apps',
+        routeBasePath: 'apps',
+        editCurrentVersion: true,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
   ],
 
   presets: [
