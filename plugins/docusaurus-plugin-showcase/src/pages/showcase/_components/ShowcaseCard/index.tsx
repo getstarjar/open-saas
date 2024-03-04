@@ -59,9 +59,19 @@ function ShowcaseCardTag({tags}: {tags: TagType[]}) {
     );
 }
 
+function getCardImage(article: Article): string {
+    return (
+        article.preview ?? 'https://raw.githubusercontent.com/getstarjar/open-saas/main/static/img/placeholder.png'
+    );
+  }
+
 function ShowcaseCard({article}: {article: Article}) {
+    const image = getCardImage(article);
     return (
         <li key={article.title} className={`card ${styles.cardBoxShadow}`}>
+            <div className={clsx('card__image', styles.showcaseCardImage)} style={{display: 'flex'}}>
+                <img src={image} alt={article.title} style={{ width: "100%", objectFit: "cover" }} />
+            </div>
             <div className="card__body">
                 <div className={clsx(styles.showcaseCardHeader)}>
                     <h4 className={styles.showcaseCardTitle}>

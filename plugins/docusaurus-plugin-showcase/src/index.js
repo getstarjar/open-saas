@@ -148,6 +148,10 @@ module.exports = function(context, options) {
                 article.source = frontMatter["x-custom"]["repo"];
             }
 
+            if (frontMatter["x-custom"] && frontMatter["x-custom"]["preview"]) {
+                article.preview = frontMatter["x-custom"]["preview"];
+            }
+
             if (missingTags || missingTitle || missingDescription) {
                 this.logWithColor("red", "  ✘ " + filePath);
                 missingTags ? this.logWithColor("red", "    - Tags: ✘") : "";
