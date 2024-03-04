@@ -1,14 +1,16 @@
 ---
 sidebar_position: 1
+description: AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.
 
 x-custom:
   tags:
     - product:voice
     - product:video
-  repo: https://github.com/andremartinssw/docusaurus-plugin-showcase
+  repo: https://github.com/AppFlowy-IO/AppFlowy
+  # preview: ./apps/app-flowy.png
 ---
 
-# Tutorial Intro
+# AppFlowy
 
 Let's discover **Docusaurus in less than 5 minutes**.
 

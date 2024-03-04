@@ -4,9 +4,9 @@
       "product:voice",
       "product:video"
     ],
-    "title": "Tutorial Intro",
-    "description": "Let's discover Docusaurus in less than 5 minutes.",
-    "website": "apps/intro",
-    "source": "https://github.com/andremartinssw/docusaurus-plugin-showcase"
+    "title": "AppFlowy",
+    "description": "AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.",
+    "website": "apps/app-flowy",
+    "source": "https://github.com/AppFlowy-IO/AppFlowy"
   }
 ]
