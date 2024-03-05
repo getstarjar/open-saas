@@ -7,6 +7,18 @@
     "title": "AppFlowy",
     "description": "AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.",
     "website": "apps/app-flowy",
-    "source": "https://github.com/AppFlowy-IO/AppFlowy"
+    "source": "https://github.com/AppFlowy-IO/AppFlowy",
+    "preview": "https://github.com/getstarjar/open-saas/blob/main/static/img/app-flowy.png?raw=true"
+  },
+  {
+    "tags": [
+      "product:voice",
+      "product:video"
+    ],
+    "title": "AppFlowy",
+    "description": "AppFlowy is an open-source alternative to Notion. You are in charge of your data and customizations. Built with Flutter and Rust.",
+    "website": "apps/app-flowy",
+    "source": "https://github.com/AppFlowy-IO/AppFlowy",
+    "preview": "https://github.com/getstarjar/open-saas/blob/main/static/img/apps/app-flowy.png?raw=true"
   }
 ]
