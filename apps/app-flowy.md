@@ -7,7 +7,7 @@ x-custom:
     - product:voice
     - product:video
   repo: https://github.com/AppFlowy-IO/AppFlowy
-  preview: https://raw.githubusercontent.com/getstarjar/open-saas/884dd6f129e8b3eaff0afcb662e701602fb9da86/static/img/apps/app-flowy.svg
+  preview: https://raw.githubusercontent.com/getstarjar/open-saas/main/static/img/apps/app-flowy.png
 ---
 
 # AppFlowy
