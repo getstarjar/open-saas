@@ -22,6 +22,7 @@ import {
 import {sortBy} from '../../../../utils/jsUtils';
 import Tooltip from '../ShowcaseTooltip';
 import styles from './styles.module.css';
+import * as url from "url";
 
 const TagComp = React.forwardRef<HTMLLIElement, Tag>(
     ({label, color, description}, ref) => (
@@ -67,9 +68,35 @@ function getCardImage(article: Article): string {
 
 function ShowcaseCard({article}: {article: Article}) {
     const image = getCardImage(article);
+
+    let sourceElement = <></>;
+
+    if (article.source) {
+        const sourceURL = new URL(article.source);
+
+        if (sourceURL.host.endsWith('github.com')) {
+            sourceElement = (
+                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                    <img src={`https://img.shields.io/github/stars${sourceURL.pathname}`} alt={article.title} style={{ width: "100%", objectFit: "cover" }} />
+                </div>
+            )
+        } else {
+            sourceElement = (
+                <Link
+                    href={article.source}
+                    className={clsx(
+                        'button button--secondary button--sm',
+                        styles.showcaseCardSrcBtn,
+                    )}>
+                    <Translate id="showcase.card.sourceLink">source</Translate>
+                </Link>
+            );
+        }
+    }
+
     return (
         <li key={article.title} className={`card ${styles.cardBoxShadow}`}>
-            <div className={clsx('card__image', styles.showcaseCardImage)} style={{display: 'flex'}}>
+            <div className={clsx('card__image', styles.showcaseCardImage)} style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <img src={image} alt={article.title} style={{ width: "100%", objectFit: "cover" }} />
             </div>
             <div className="card__body">
@@ -82,16 +109,7 @@ function ShowcaseCard({article}: {article: Article}) {
                     {article.tags.includes('favorite') && (
                         <FavoriteIcon svgClass={styles.svgIconFavorite} size="small" />
                     )}
-                    {article.source && (
-                        <Link
-                            href={article.source}
-                            className={clsx(
-                                'button button--secondary button--sm',
-                                styles.showcaseCardSrcBtn,
-                            )}>
-                            <Translate id="showcase.card.sourceLink">source</Translate>
-                        </Link>
-                    )}
+                    {sourceElement}
                 </div>
                 <p className={styles.showcaseCardBody}>{article.description}</p>
             </div>
